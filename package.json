@@ -1,0 +1,13 @@
+{
+  "name": "mutantspider-loader",
+  "version": "0.0.1",
+  "description": "Tool to load asmjs+pexe components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pkholland/mutantspider-loader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "readme": "# mutantspider-loader\nTool to load asmjs+pexe components\n",
+  "readmeFilename": "README.md"
+}
