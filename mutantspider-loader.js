@@ -13,13 +13,16 @@ module.exports.load_modules = function(submodules, callback) {
         function(bytes) {
           nacl_elem.setAttribute('local_storage', bytes);
           control_elem.appendChild(nacl_elem);
+          callback({module: nacl_elem, mod_id: i, submodule: subm});
         },
         function(err) {
           control_elem.appendChild(nacl_elem);
+          callback({module: nacl_elem, mod_id: i, submodule: subm});
         });
-    else
-        control_elem.appendChild(nacl_elem);
-    callback({module: nacl_elem, mod_id: i, submodule: subm});
+    else {
+      control_elem.appendChild(nacl_elem);
+      callback({module: nacl_elem, mod_id: i, submodule: subm});
+    }
   }
 
   submodules.forEach(function(subm, i, a){
